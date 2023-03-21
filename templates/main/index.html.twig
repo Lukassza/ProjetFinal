@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Los Petits Panos{% endblock %}
+
+{% block stylesheets %}
+{{parent()}}
+           <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+{% endblock %}
+
+
+
+
+{% block body %}
+<div class="container">
+    <video autoplay loop muted>
+      <source src="https://storage.googleapis.com/gtfo-prod-v1/Trailer_for_website_Pro_Res_2_H_264_24fef05909/Trailer_for_website_Pro_Res_2_H_264_24fef05909.mp4" type="video/mp4">
+    </video>
+</div>
+
+
+
+
+
+<p>SALUT A TOUS OUBLIE PAS LES LIENS SPOTIFY L'AMI</p>
+{% endblock %}
