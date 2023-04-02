@@ -1,7 +1,4 @@
-body{background-color:rgb(4, 135, 135);
-color:rgb(211, 0, 0);
-margin:0;}
-
+body{margin:0;}
 .container {
     position: relative;
     height: 100vh;
