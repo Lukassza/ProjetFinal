@@ -8,4 +8,4 @@ nuit.addEventListener("click",function(e){
         a.classlist.remove("anuit")
     }
     else{a.classList.add("anuit") }
-})
+});
