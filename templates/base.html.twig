@@ -12,13 +12,13 @@
 
         {% block javascripts %}
             {# {{ encore_entry_script_tags('app') }} #}
-            <script="{{ asset('js/main.js') }}" ></script>
+            <script="{{ asset('js/main.js') }}" defer ></script>
         {% endblock %}
     </head>
     <body>
         {% block body %}
         {% endblock %}
-        <nav class="nav">
+        <nav>
   <ul class="navbar">
   <button type="btn" class="nuit">Nuit</button>
     <li><a href="/">Accueil</a></li>
