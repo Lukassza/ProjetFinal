@@ -11,14 +11,16 @@
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
+            {# {{ encore_entry_script_tags('app') }} #}
+            <script="{{ asset('js/main.js') }}" ></script>
         {% endblock %}
     </head>
     <body>
         {% block body %}
         {% endblock %}
-        <nav>
+        <nav class="nav">
   <ul class="navbar">
+  <button type="btn" class="nuit">Nuit</button>
     <li><a href="/">Accueil</a></li>
     <li><a href="/inscription">Inscription</a></li>
     <li><a href="/login">Se connecter</a></li>
@@ -27,13 +29,16 @@
         <a href="#jeux" class="dropdown-toggle">Jeux</a>
         <div class="dropdown-content">
           <a href="/jeux/gtfo">gtfo</a>
-          <a href="#">mcdungeon</a>
-          <a href="#">lol</a>
+          <a href="/jeux/mcdungeon">mcdungeon</a>
+          <a href="/jeux/lol">league of legends</a>
         </div>
+        
       </li>
   </ul>
 </nav>
 
+
+<footer> Crée en 2023 @Sanchesque </footer>
     </body>
 </html>
 
