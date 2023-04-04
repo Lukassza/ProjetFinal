@@ -1,23 +1,45 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Los Petits Panos{% endblock %}
+{% block title %}Los Petits Panos
+{% endblock %}
 
 {% block stylesheets %}
-{{parent()}}
-           <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-           <link href="{{ asset('js/main.js') }}" rel="stylesheet">
-{% endblock %}
+    {{ parent() }}
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+        <link href="{{ asset('js/main.js') }}" rel="stylesheet">
+        {% endblock %}
 
 
+        {% block body %}
 
 
-{% block body %}
+        <br>
+        <br>
+
+            <div class="entete">
+            </div>
 
 
-
-
-
-<br>
-<br>
-<p class="test">TEST</p>
-{% endblock %}
+            <div class="new">
+                <div class="biovideo">
+                    <iframe width="350" height="200" src="https://www.youtube.com/embed/pwrA7Ebg7Qg"></iframe>
+                    <div class="bio">
+                    Gnome Gnome gnome, gnome gnome gnomegnome </div> 
+                </div>
+          
+                <div class="biovideo">
+                    <iframe width="350" height="200" src="https://www.youtube.com/embed/pwrA7Ebg7Qg"></iframe>
+                    <div class="bio">
+                    Gnome Gnome gnome, gnome gnome gnomegnome </div> 
+                    
+                </div>    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+        {% endblock %}

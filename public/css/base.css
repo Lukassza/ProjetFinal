@@ -9,7 +9,7 @@ nav {
   width:100%;
   --nav-height: 4.75rem;
     padding: 10px;
-    background-color: rgba(145, 141, 141, 0.5); 
+    background-color: rgba(255, 255, 255, 0.61); 
     font-family: 'Futura PT', sans-serif;
   }
   
@@ -33,7 +33,7 @@ nav {
   }
   
   nav a:hover {
-    color: #ffffff; 
+    color: #03019b; 
   }
   
   .dropdown {
@@ -85,3 +85,9 @@ footer{width:100%;
    position:fixed; 
    bottom:0%;
   left:0%;}
+
+button{background-color: rgba(0, 0, 0, 0);
+border-color:transparent}
+
+.far{color:rgb(251, 255, 0);}
+.far:hover{color:rgb(4, 20, 250);}

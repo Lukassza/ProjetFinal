@@ -20,22 +20,3 @@ nuit.addEventListener("click", function (e) {
 });
 });
 
-
-let boutton=document.querySelector(".nuit")
-let navbar=document.querySelector("navbar")
-let lien=document.querySelectorAll("a")
-
-boutton.addEventListener("click", function (e) {
-    lien.forEach(function(lien) {
-  if (lien.classList.contains("liendark")) {
-    lien.classList.remove("liendark");
-    navbar.classList.remove("navbardark");
-
-  } else {
-    lien.classList.add("liendark");
-    navbar.classList.add("navbardark");
-
-
-  }
-});
-});

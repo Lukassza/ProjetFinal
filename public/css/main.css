@@ -1,35 +1,33 @@
-body{background-color:rgb(78, 238, 238);
-color:rgb(211, 0, 0);
+body{background-color:rgb(19, 219, 226);
+
 margin:0;}
 
-.container {
-    position: relative;
-    height: 100vh;
-    
-  }
-  
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
 
-  .container p {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 20px 0;
-    font-size: 24px;
-    color: #fff;
-    text-align: center;
-  }
 
 
   .bodynuit{background-color: rgb(83, 2, 2);}
 
- 
+
+ .entete{width:100vw;
+  height:25vh;
+  background-image: url("https://www.radiofrance.fr/s3/cruiser-production/2023/01/057c1bc4-14e0-4c3e-8a45-d9c8cc02165d/870x489_gettyimages-1435879397.jpg")}
+
+  .new{background-color:rgba(7, 7, 7, 0.555);
+    width:100vw;height:70vh;
+  }
+
+
+  .biovideo{display:flex;
+  align-items:center;
+  margin-bottom:5%;
+  
+  
+ }
+
+  .bio{color:white;
+    font-size:larger;
+  text-align:center;
+flex:1;}
+
+
+  
