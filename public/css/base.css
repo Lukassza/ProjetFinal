@@ -2,22 +2,25 @@
 
 /* !NAVBAR */
 
-nav {position:fixed;
-    top:0;
-    left:0;
-    --nav-height: 4.75rem;
-    width:100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+nav {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  --nav-height: 4.75rem;
     padding: 10px;
+    background-color: rgba(145, 141, 141, 0.5); 
     font-family: 'Futura PT', sans-serif;
   }
   
-  nav ul {
+  nav ul {display:flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; 
+    
   }
+
+ .inscription{margin-left:65%;}
   
   nav li {
     margin: 0 10px;
@@ -25,12 +28,12 @@ nav {position:fixed;
   }
   
   nav a {
-    color: #fff; 
+    color: #300303; 
     text-decoration: none;
   }
   
   nav a:hover {
-    color: #ffc107; 
+    color: #ffffff; 
   }
   
   .dropdown {
@@ -63,8 +66,17 @@ nav {position:fixed;
     display: block;
   }
 
+/* nuit */
 
-.anuit{color:rgb(50, 228, 15);}
+.anuit{color:rgb(255, 255, 255);}
+
+.anuit:hover{color:rgb(9, 223, 9);
+  border:solid;
+  border-width: thin;
+border-color:rgb(9, 223, 9);}
+.navnuit{background-color: rgba(0, 0, 0, 0.664);}
+
+
 
 footer{width:100%;
   background-color:rgb(0, 0, 0);

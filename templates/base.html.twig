@@ -2,49 +2,56 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+        <title>
+            {% block title %}Welcome!
+            {% endblock %}
+        </title>
+        <link
+        rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             <link href="{{ asset('css/base.css') }}" rel="stylesheet">
-              <link href="https://fonts.googleapis.com/css2?family=Futura+PT&display=swap" rel="stylesheet">
-        {% endblock %}
-
+            <link href="https://fonts.googleapis.com/css2?family=Futura+PT&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />        {% endblock %}
         {% block javascripts %}
             {# {{ encore_entry_script_tags('app') }} #}
-            <script="{{ asset('js/main.js') }}" defer ></script>
+            <script src="{{ asset('js/base.js') }}" defer></script>
         {% endblock %}
     </head>
     <body>
         {% block body %}
         {% endblock %}
         <nav>
-  <ul class="navbar">
-  <button type="btn" class="nuit">Nuit</button>
-    <li><a href="/">Accueil</a></li>
-    <li><a href="/inscription">Inscription</a></li>
-    <li><a href="/login">Se connecter</a></li>
-    <li><a href="/equipe">Equipe</a></li>
-    <li class="dropdown">
-        <a href="#jeux" class="dropdown-toggle">Jeux</a>
-        <div class="dropdown-content">
-          <a href="/jeux/gtfo">gtfo</a>
-          <a href="/jeux/mcdungeon">mcdungeon</a>
-          <a href="/jeux/lol">league of legends</a>
-        </div>
-        
-      </li>
-  </ul>
-</nav>
+            <ul class="navbar">
+                <button type="btn" class="nuit"><i class="far fa-sun"></i></button>
+                <li>
+                    <a href="/">Accueil</a>
+                </li>
+
+                <li>
+                    <a href="/equipe">Equipe</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#jeux" class="dropdown-toggle">Jeux</a>
+                    <div class="dropdown-content">
+                        <a href="/jeux/gtfo">gtfo</a>
+                        <a href="/jeux/mcdungeon">mcdungeon</a>
+                        <a href="/jeux/lol">league of legends</a>
+                        <li class="inscription">
+                            <a href="/inscription">Inscription</a>
+                        </li>
+                        <li class="connexion">
+                            <a href="/login">Se connecter</a>
+                        </li>
+                    </div>
+
+                </li>
+            </ul>
+        </nav>
 
 
-<footer> Crée en 2023 @Sanchesque </footer>
+        <footer>
+            Crée en 2023 @Sanchesque
+        </footer>
     </body>
 </html>
-
-
-
-
-
-
-
