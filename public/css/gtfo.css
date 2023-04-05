@@ -1,0 +1,83 @@
+.intro{position:absolute;
+    top:20%;
+    z-index:1;
+    width:60%;
+    background-color: rgba(0, 0, 0, 0.664);
+color:rgb(0, 248, 12);
+font-family: "Copperplate Gothic Light"; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;}
+
+
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.intro {
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+}
+.intro::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #04911000;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: conic-gradient(transparent, #03920a, transparent 30%);
+  -webkit-animation: rotate 4s linear infinite;
+          animation: rotate 4s linear infinite;
+}
+.intro::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: #00000093;
+  border-radius: 5px;
+}
+
+.intro-demo::after {
+  -webkit-animation: opacityChange 5s infinite linear;
+          animation: opacityChange 5s infinite linear;
+}
+
+@-webkit-keyframes opacityChange {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityChange {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

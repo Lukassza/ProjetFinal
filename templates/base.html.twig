@@ -37,12 +37,26 @@
                         <a href="/jeux/gtfo">gtfo</a>
                         <a href="/jeux/mcdungeon">mcdungeon</a>
                         <a href="/jeux/lol">league of legends</a>
-                        <li class="inscription">
-                            <a href="/inscription">Inscription</a>
+                        {%if app.user %}
+                        <li class="profil">
+                            <a href="/user/1">profil</a>
                         </li>
+                        {%endif%}
+                        
+                        {%if app.user %}
+                        <li class="connexion"><a href="{{ path('app_logout') }}">Déconnexion</a>
+                        </li>
+                        {% else %}
                         <li class="connexion">
                             <a href="/login">Se connecter</a>
                         </li>
+                        {%endif%}
+                        {%if app.user %}
+                        {% else %}
+                        <li class="inscription">
+                            <a href="/inscription">Inscription</a>
+                        </li>
+                        {%endif%}
                     </div>
 
                 </li>

@@ -8,7 +8,7 @@ nav {
   left:0;
   width:100%;
   --nav-height: 4.75rem;
-    padding: 10px;
+    padding: 8px;
     background-color: rgba(255, 255, 255, 0.61); 
     font-family: 'Futura PT', sans-serif;
   }
@@ -20,7 +20,7 @@ nav {
     
   }
 
- .inscription{margin-left:65%;}
+ .connexion{margin-left:65%;}
   
   nav li {
     margin: 0 10px;
@@ -89,5 +89,7 @@ footer{width:100%;
 button{background-color: rgba(0, 0, 0, 0);
 border-color:transparent}
 
-.far{color:rgb(251, 255, 0);}
+.far{color:rgb(212, 4, 4);}
 .far:hover{color:rgb(4, 20, 250);}
+
+.farnuit{color:yellow}
