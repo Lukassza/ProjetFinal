@@ -9,7 +9,7 @@ font-family: "Copperplate Gothic Light"; font-size: 24px; font-style: normal; fo
 
 
 
-
+ /* anim div intro */
 *,
 *::before,
 *::after {
@@ -40,7 +40,7 @@ font-family: "Copperplate Gothic Light"; font-size: 24px; font-style: normal; fo
   top: -50%;
   width: 200%;
   height: 200%;
-  background-color: #04911000;
+  background-color: #04911015;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-image: conic-gradient(transparent, #03920a, transparent 30%);
