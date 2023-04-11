@@ -1,6 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}User{% endblock %}
+{% block title %}Profil{% endblock %}
+
+
+{% block stylesheets %}
+{{parent()}}
+           <link href="{{ asset('css/show.css') }}" rel="stylesheet">
+        
+{% endblock %}
 
 {% block body %}
 <br>
@@ -8,32 +15,29 @@
 
     <table class="table">
         <tbody>
+
             <tr>
-                <th>Id</th>
-                <td>{{ app.user.id }}</td>
+                <th>pseudo:</th>
+                <td>{{ app.user.pseudo }}</td>
             </tr>
             <tr>
-                <th>Email</th>
+                <th>Email:</th>
                 <td>{{ app.user.email }}</td>
             </tr>
-            {# <tr>
-                <th>Roles</th>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-            </tr>
+
             <tr>
-                <th>Password</th>
-                <td>{{ user.password }}</td>
+                
+                <img class="pp" src={{ asset(vich_uploader_asset(app.user, 'imageFile')) }}>
             </tr>
-            <tr>
-                <th>IsVerified</th>
-                <td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
-            </tr> #}
+            
+            
         </tbody>
     </table>
+    
+   
+    
 
-    <a href="{{ path('app_user_index') }}">back to list</a>
-
-    <a href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
+    <a href="{{ path('app_user_edit', {'id': user.id}) }}">modifier</a>
 
     {{ include('user/_delete_form.html.twig') }}
 {% endblock %}

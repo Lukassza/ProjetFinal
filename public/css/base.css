@@ -86,10 +86,10 @@ footer{width:100%;
    bottom:0%;
   left:0%;}
 
-button{background-color: rgba(0, 0, 0, 0);
+.nuit{background-color: rgba(0, 4, 255, 0.253);
 border-color:transparent}
 
-.far{color:rgb(212, 4, 4);}
-.far:hover{color:rgb(4, 20, 250);}
+.far{color:rgb(212, 191, 4);}
+.far:hover{color:rgb(240, 224, 156);}
 
 .farnuit{color:yellow}
