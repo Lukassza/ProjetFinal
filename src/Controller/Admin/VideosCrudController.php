@@ -8,6 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ChoiceField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\CollectionField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class VideosCrudController extends AbstractCrudController
@@ -24,12 +25,11 @@ class VideosCrudController extends AbstractCrudController
             
             TextField::new('titre'),
             TextField::new('lien'),
-            
-            ChoiceField::new('categorie')->setChoices([
-                'gtfo' => '1',
-                'lol' => '2',
-            ])
-            // https://stackoverflow.com/questions/53997251/symfony-forms-expected-argument-of-type-string-given-at-property-path
+            AssociationField::new('categorie')
+            // ChoiceField::new('categorie')->setChoices([
+            //     'gtfo' => '1',
+            //     'lol' => '2',
+            // ])
         ];
     }
     
