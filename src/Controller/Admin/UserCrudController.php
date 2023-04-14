@@ -23,7 +23,12 @@ class UserCrudController extends AbstractCrudController
             ->setEntityLabelInSingular('Utilisateur');
             
     }
-    /*
+}    
+
+
+
+
+/*
     public function configureFields(string $pageName): iterable
     {
         return [
@@ -33,4 +38,4 @@ class UserCrudController extends AbstractCrudController
         ];
     }
     */
-}
+

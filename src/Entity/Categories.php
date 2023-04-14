@@ -64,7 +64,6 @@ class Categories
     public function removeVideo(Videos $video): self
     {
         if ($this->videos->removeElement($video)) {
-            // set the owning side to null (unless already changed)
             if ($video->getCategorie() === $this) {
                 $video->setCategorie(null);
             }

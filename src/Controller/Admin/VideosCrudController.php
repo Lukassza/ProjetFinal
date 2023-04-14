@@ -26,11 +26,13 @@ class VideosCrudController extends AbstractCrudController
             TextField::new('titre'),
             TextField::new('lien'),
             AssociationField::new('categorie')
-            // ChoiceField::new('categorie')->setChoices([
-            //     'gtfo' => '1',
-            //     'lol' => '2',
-            // ])
+           
         ];
     }
     
 }
+
+ // ChoiceField::new('categorie')->setChoices([
+            //     'gtfo' => '1',
+            //     'lol' => '2',
+            // ])
