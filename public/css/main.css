@@ -1,17 +1,18 @@
-body{background-color:rgb(245, 221, 9);
+body{background:linear-gradient(rgb(0, 208, 255),rgb(5, 232, 141));
 
 margin:0;}
 
 
 
 
-  .bodynuit{background-color: rgb(175, 2, 2);}
+  .bodynuit{background:linear-gradient(red,black);}
 
 
  .entete{width:100vw;
   height:25vh;
-  background-image: url("https://static.actu.fr/uploads/2022/06/tifo-rcl.jpg");
-background-position: 0% 55%;}
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh532NpFv5psZRlznL6H69a5IkW6_rwhECuw&usqp=CAU");
+/* background-position: 0% 55%; */
+}
 
   .new{background-color:rgba(7, 7, 7, 0.384);
     width:100vw;height:70vh;
