@@ -23,6 +23,9 @@ class Videos
     #[ORM\JoinColumn(nullable: false)]
     private ?Categories $categorie = null;
 
+    #[ORM\Column(length: 500)]
+    private ?string $description = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -63,4 +66,17 @@ class Videos
 
         return $this;
     }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(string $description): self
+    {
+        $this->description = $description;
+
+        return $this;
+    }
 }
+

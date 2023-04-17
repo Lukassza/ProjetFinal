@@ -15,6 +15,7 @@ class UserType extends AbstractType
         $builder
             ->add('email')
             ->add('roles')
+            // ->add('imageFile',VichImageType::class)
             ->add('password')
             ->add('isVerified')
             

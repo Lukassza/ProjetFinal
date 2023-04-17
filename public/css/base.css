@@ -1,5 +1,5 @@
 
-i{text-decoration: none;}
+
 /* !NAVBAR */
 
 nav {
@@ -84,7 +84,8 @@ footer{width:100%;
   text-align:center;
    position:fixed; 
    bottom:0%;
-  left:0%;}
+  left:0%;
+}
 
 .nuit{background-color: rgba(0, 4, 255, 0.253);
 border-color:transparent}
@@ -93,3 +94,9 @@ border-color:transparent}
 .far:hover{color:rgb(240, 224, 156);}
 
 .farnuit{color:yellow}
+
+.liens{margin-top:8px;}
+
+footer a{color:white;
+margin-left:20px;}
+footer i{margin-right:8px;}
