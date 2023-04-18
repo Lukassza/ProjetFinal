@@ -4,51 +4,59 @@
 {% endblock %}
 
 {% block stylesheets %}
-    {{ parent() }}
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-        <link href="{{ asset('js/main.js') }}" rel="stylesheet">
-        {% endblock %}
+	{{ parent() }}
+	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
+	<link href="{{ asset('js/main.js') }}" rel="stylesheet">
+{% endblock %}
 
 
-        {% block body %}
+{% block body %}
 
 
-        <br>
-        <br>
+	<br>
+	<br>
 
-            <div class="entete">
-            </div>
-
-        {# {% for lastvideo in lastvideos %}
-        function lastvideos (){
-    $pdo = new PDO('mysql:dbname=ProjetFinal;host=localhost','root','root');
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-    $lastvideos = $pdo->query('SELECT * from videos ORDER BY id DESC LIMIT 2');
-    return $lastvideos;
-} #}
+	<div class="entete"></div>
 
 
-            <div class="new">
-                <div class="biovideo">
-                    <iframe width="350" height="200" src="{{ lastvideo.lien }}"></iframe>
-                    <div class="bio">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta enim vel ante tristique suscipit. Integer sit amet varius ipsum, gravida fringilla lectus. Proin fringilla mauris a elit consequat cursus. Nam posuere tristique nunc vitae tristique. Sed ornare at dolor nec tempor. Sed turpis risus, condimentum ut commodo et, tincidunt vel metus. Aliquam dignissim luctus dignissim. </div> 
-                </div>
-          
-                <div class="biovideo">
-                    <iframe width="350" height="200" src="https://youtube.com/embed/SlgN5j48bls"></iframe>
-                    <div class="bio">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta enim vel ante tristique suscipit. Integer sit amet varius ipsum, gravida fringilla lectus. Proin fringilla mauris a elit consequat cursus. Nam posuere tristique nunc vitae tristique. Sed ornare at dolor nec tempor. Sed turpis risus, condimentum ut commodo et, tincidunt vel metus. Aliquam dignissim luctus dignissim. </div> 
-                    
-                </div>    
-        {# {% endfor %}     #}
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-        {% endblock %}
+	<div
+		class="new">
+		
+
+
+		{% for video in videos %}
+
+			<div class="biovideo">
+				<iframe width="350" height="200" src="{{ video.lien|replace({'watch?v=': 'embed/'}) }}"></iframe>
+				<div class="bio">
+					{{video.description}}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
+
+
+
+
+{# <div class="biovideo">
+					<iframe width="350" height="200" src="https://youtube.com/embed/SlgN5j48bls"></iframe>
+					<div class="bio">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta enim vel ante tristique suscipit. Integer sit amet varius ipsum, gravida fringilla lectus. Proin fringilla mauris a elit consequat cursus. Nam posuere tristique nunc vitae tristique. Sed ornare at dolor nec tempor. Sed turpis risus, condimentum ut commodo et, tincidunt vel metus. Aliquam dignissim luctus dignissim.
+					</div>
+				</div>
+		
+				<div class="biovideo">
+					<iframe width="350" height="200" src="https://youtube.com/embed/SlgN5j48bls"></iframe>
+					<div class="bio">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta enim vel ante tristique suscipit. Integer sit amet varius ipsum, gravida fringilla lectus. Proin fringilla mauris a elit consequat cursus. Nam posuere tristique nunc vitae tristique. Sed ornare at dolor nec tempor. Sed turpis risus, condimentum ut commodo et, tincidunt vel metus. Aliquam dignissim luctus dignissim.
+					</div>
+		
+				</div>
+		
+				{% for video in videos %}
+		        
+				<iframe width="350" height="200" src="{{ video.lien|replace({'watch': 'embed'}) }}"></iframe>
+				{% endfor %}
+		
+			{% endblock %} #}

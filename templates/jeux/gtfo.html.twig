@@ -13,7 +13,7 @@
 
 {% block body %}
 
-
+<div class="titre">GTFO</div>
 <div class="container">
     <video autoplay loop muted>
       <source src="https://storage.googleapis.com/gtfo-prod-v1/Trailer_for_website_Pro_Res_2_H_264_24fef05909/Trailer_for_website_Pro_Res_2_H_264_24fef05909.mp4" type="video/mp4">
@@ -26,8 +26,17 @@
 </div>
 
 <div class="liens">
-ici les liens
-SELECT * FROM `videos` where categorie="gtfo" ORDER BY id DESC limit 2 
+
+{% for video in videos %}
+
+			<div class="biovideo">
+				<iframe width="350" height="200" src="{{ video.lien|replace({'watch?v=': 'embed/'}) }}"></iframe>
+				<div class="bio">
+					{{video.description}}
+				</div>
+			</div>
+		{% endfor %}
+
 </div>
 
 

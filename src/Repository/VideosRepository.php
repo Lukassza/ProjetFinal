@@ -39,6 +39,25 @@ class VideosRepository extends ServiceEntityRepository
         }
     }
 
+    public function findLatest(int $limit = 2): array
+    {
+        return $this->createQueryBuilder('v')
+            ->orderBy('v.id', 'DESC')
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findLatestGtfo(int $limit = 2): array
+    {
+        return $this->createQueryBuilder('v')
+            ->where('v.categorie = 1')
+            ->orderBy('v.id', 'DESC')
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    }
+}
 //    /**
 //     * @return Videos[] Returns an array of Videos objects
 //     */
@@ -63,4 +82,4 @@ class VideosRepository extends ServiceEntityRepository
 //            ->getOneOrNullResult()
 //        ;
 //    }
-}
+

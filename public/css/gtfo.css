@@ -1,20 +1,56 @@
 .intro{position:absolute;
     top:20%;
+    left:17%;
     z-index:1;
-    width:60%;
+    width:70%;
     background-color: rgba(0, 0, 0, 0.664);
 color:rgb(0, 248, 12);
-font-family: "Copperplate Gothic Light"; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;}
+font-family: "Copperplate Gothic Light"; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;}
+
+
+.titre{font-family: "Copperplate Gothic Light";
+  font-weight: bold;
+  position:absolute;
+top:8vh;
+left:40vw;
+font-size:100px;
+animation: blink 12s infinite;}
+
+.liens{display:flex;
+  position:absolute;
+  top:50%;
+  z-index:1;
+  display:flex;
+  width:100vw;}
+
+
+.biovideo{display:flex;
+  width:50vw;
+  flex-direction:column;
+  align-items:center;
+  margin-bottom:5%;}
+
+.bio{ text-shadow: 1px 1px 10px rgb(41, 241, 41);
+  width:30vw;
+  text-align:center;
+  color:white;
+  font-size:larger;
+}
 
 
 
-.liens{width:100vw;}
 
+@keyframes blink {
+  20%,22%,55%,75%,96%,98%{
+    color: #090b0044;
+    text-shadow: none;
+  }
 
-
-
-
-
+  0%,19%,21%,23%,25%,54%,56%,74%,76%,95%,97%,99%,100% {
+text-shadow: 0 0 5px #01a501, 0 0 15px #01a501, 0 0 20px #01a501, 0 0 40px #01a501,
+0 0 60px #0e5d00, 0 0 10px #01a501, 0 0 98px #03e303;color: #20f50c;
+  }
+}
 
 
 

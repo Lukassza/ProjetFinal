@@ -2,19 +2,22 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\VideosRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 #[Route('/jeux')]
 class JeuxController extends AbstractController
 {
     
     #[Route('/gtfo', name: 'app_gtfo', methods: ['GET'])]
-    public function gtfo(): Response
+    public function gtfo(VideosRepository $videosRepository): Response
     {
         return $this->render('jeux/gtfo.html.twig', [
             'controller_name' => 'JeuxController',
+            $videos= $videosRepository->findLatestGtfo(),
+            'videos'=>$videos,
         ]);
     }
 
