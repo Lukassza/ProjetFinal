@@ -44,6 +44,11 @@
                             <a href="/user/1">profil</a>
                         </li>
                         {%endif%}
+
+                        {% if is_granted('ROLE_ADMIN') %}                        
+                        <li class="connexion"><a href="{{ path('admin') }}">Administration</a>
+                        </li>
+                        {%endif%}
                         
                         {%if app.user %}
                         <li class="connexion"><a href="{{ path('app_logout') }}">Déconnexion</a>
@@ -67,7 +72,7 @@
 
 
         <footer> 
-        <div class="liens">
+        <div class="reseaux">
         <a href="https://www.youtube.com/@lospetitspanos"> <i class="fa-brands fa-youtube fa-shake" style="color: #eb0505;"></i>Youtube</a>
         <a href="https://www.twitter.com/@lospetitspanos"> <i class="fa-brands fa-twitter fa-bounce" style="color: #09bebb;"></i>Twitter</a>
         <a href="https://www.tiktok.com/@lospetispanos"><i class="fa-brands fa-tiktok fa-beat" style="color: #11D325;"></i>Tiktok</a>            

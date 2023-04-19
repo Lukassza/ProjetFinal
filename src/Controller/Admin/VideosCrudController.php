@@ -25,6 +25,7 @@ class VideosCrudController extends AbstractCrudController
             
             TextField::new('titre'),
             TextField::new('lien'),
+            TextField::new('description'),
             AssociationField::new('categorie')
            
         ];
