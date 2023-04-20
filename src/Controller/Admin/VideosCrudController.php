@@ -33,7 +33,4 @@ class VideosCrudController extends AbstractCrudController
     
 }
 
- // ChoiceField::new('categorie')->setChoices([
-            //     'gtfo' => '1',
-            //     'lol' => '2',
-            // ])
+ 

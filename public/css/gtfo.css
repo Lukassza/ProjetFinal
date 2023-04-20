@@ -1,6 +1,6 @@
 .intro{position:absolute;
     top:20%;
-    left:17%;
+    left:15%;
     z-index:1;
     width:70%;
     background-color: rgba(0, 0, 0, 0.664);
@@ -12,7 +12,7 @@ font-family: "Copperplate Gothic Light"; font-size: 20px; font-style: normal; fo
   font-weight: bold;
   position:absolute;
 top:8vh;
-left:40vw;
+left:38vw;
 font-size:100px;
 animation: blink 12s infinite;}
 
