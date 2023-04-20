@@ -22,18 +22,22 @@ class JeuxController extends AbstractController
     }
 
     #[Route('/lol', name: 'app_lol', methods: ['GET'])]
-    public function lol(): Response
+    public function lol(VideosRepository $videosRepository): Response
     {
         return $this->render('jeux/lol.html.twig', [
             'controller_name' => 'JeuxController',
+            $videos= $videosRepository->findLatestLol(),
+            'videos'=>$videos,
         ]);
     }
 
     #[Route('/mcdungeon', name: 'app_mcdungeon', methods: ['GET'])]
-    public function mcdungeon(): Response
+    public function mcdungeon(VideosRepository $videosRepository): Response
     {
         return $this->render('jeux/mcdungeon.html.twig', [
             'controller_name' => 'JeuxController',
+            $videos= $videosRepository->findLatestMcdungeon(),
+            'videos'=>$videos,
         ]);
     }
 

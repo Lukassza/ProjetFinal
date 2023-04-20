@@ -15,6 +15,9 @@
 	{% endfor %}
 
 	<br>
+	<div class="container">
+<div class="formulaire">
+
 	<h1>Inscription</h1>
 
 	{{ form_start(registrationForm) }}
@@ -23,7 +26,9 @@
 	{{ form_row(registrationForm.plainPassword, {
             label: 'Mot de passe:'
         }) }}
-
 	<button type="submit" class="btn">S'inscrire</button>
-	{{ form_end(registrationForm) }}
+{{ form_end(registrationForm) }}
+	
+	</div>
+	</div>
 {% endblock %}

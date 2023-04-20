@@ -1,0 +1,38 @@
+.titre{font-family: "Copperplate Gothic Light";
+    font-weight: bold;
+    position:absolute;
+  top:8vh;
+ left:15vw;
+  font-size:100px;
+  text-align:center;
+  }
+
+
+
+
+.liens{display:flex;
+    position:absolute;
+    top:50%;
+    z-index:1;
+    display:flex;
+    width:100vw;
+justify-content: space-around;}
+  
+  
+  .biovideo{display:flex;
+    width:30vw;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:5%;
+    text-shadow: 1px 1px 10px rgb(4, 4, 204);}
+  
+  .bio{ 
+    width:30vw;
+    text-align:center;
+    color:white;
+    font-size:larger;
+  }
+
+  .biovideo:hover{background-color:rgba(0, 0, 255, 0.247);
+border:solid;border-color:rgba(255, 255, 255, 0.424);
+text-shadow:1px 1px 10px rgb(0, 0, 0);}

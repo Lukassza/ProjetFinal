@@ -57,6 +57,26 @@ class VideosRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    public function findLatestMcdungeon(int $limit = 2): array
+    {
+        return $this->createQueryBuilder('v')
+            ->where('v.categorie = 3')
+            ->orderBy('v.id', 'DESC')
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    }
+
+    public function findLatestLol(int $limit = 2): array
+    {
+        return $this->createQueryBuilder('v')
+            ->where('v.categorie = 2')
+            ->orderBy('v.id', 'DESC')
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    }
 }
 //    /**
 //     * @return Videos[] Returns an array of Videos objects
