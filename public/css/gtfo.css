@@ -133,6 +133,49 @@ text-shadow: 0 0 5px #01a501, 0 0 15px #01a501, 0 0 20px #01a501, 0 0 40px #01a5
   }
 }
 
+
+/* PopUp */
+
+.age {
+  position: fixed;
+  left: 0;
+  top: 00;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.agetexte {
+  
+  position: relative;
+  color:white;
+  background-color: rgb(18, 0, 0);
+  width:100vw;
+  height:100vh;
+  padding: 20px;
+  z-index:4;
+  text-align:center;
+  justify-content: center;
+  align-items: center;
+}
+
+.ageferme {
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+ 
+}
+
+.centreage{margin-top:40vh;}
+
+
+
+
+/* Responsive */
 @media only screen and (min-width:319px) and (max-width:1000px){ 
   
 }
