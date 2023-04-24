@@ -9,7 +9,7 @@ nav {
   width:100%;
   --nav-height: 4.75rem;
     padding: 8px;
-    background-color: rgba(255, 255, 255, 0.61); 
+    background-color: rgba(255, 255, 255, 0.311); 
     font-family: 'Futura PT', sans-serif;
   }
   
@@ -100,3 +100,16 @@ border-color:transparent}
 footer a{color:white;
 margin-left:20px;}
 footer i{margin-right:8px;}
+
+
+
+
+
+
+/* Responsive */
+@media only screen and (min-width:319px) and (max-width:1000px){ 
+  
+  nav{font-size:larger;
+  }
+  .connexion{margin-left:20vw;}
+}

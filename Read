@@ -1,14 +1,11 @@
-Finir le dropdown menu
-vichbundle voir tuto ytb developpeur musclé
 remplacer la vidéo pour chaque jeu
 faire les profils dans equipe
-gerer connexion/utilisateur ect
 créer la base pour les LIENS
 menu admin pour remplacer les liens des videos
 Liens spotify (perma ou admin a voir)
 télécharger et mettre lien video gtfo dans le dossier
-Mode admin pour les liens des vidéos (éventuellement ban des users)
-
-ajouter le bouton admin dans la nav uniquement lorsque co en admin
 faire la maquette
-fenêtre modale pour la page gtfo vérification d'âge
+fenêtre modale pour la page gtfo vérification d'âge flouter le fond
+empêcher la modification de n'importe quel profil
+karser recaptcha  keys dans le .env et script dans la base
+gérer le menu jeux en responsive ( ne descend pas )

@@ -65,6 +65,8 @@ class UserController extends AbstractController
             'user' => $user,
             'form' => $form,
         ]);
+
+
     }
 
     #[Route('/{id}', name: 'app_user_delete', methods: ['POST'])]
