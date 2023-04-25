@@ -1,11 +1,13 @@
-remplacer la vidéo pour chaque jeu
-faire les profils dans equipe
-créer la base pour les LIENS
-menu admin pour remplacer les liens des videos
-Liens spotify (perma ou admin a voir)
-télécharger et mettre lien video gtfo dans le dossier
-faire la maquette
-fenêtre modale pour la page gtfo vérification d'âge flouter le fond
-empêcher la modification de n'importe quel profil
-karser recaptcha  keys dans le .env et script dans la base
+finir le menu équipe
 gérer le menu jeux en responsive ( ne descend pas )
+karser recaptcha  keys dans le .env et script dans la base
+
+télécharger et mettre lien video gtfo dans le dossier
+finir le design d'inscription/connexion
+finir la maquette
+
+
+faire les profils dans equipe
+Liens spotify (perma ou admin a voir)
+faire la page lol
+ajouter les autres projets(morpion/carlos ect)

@@ -1,11 +1,10 @@
 # config/packages/easy_admin.yaml
 easy_admin:
-    # ...
     translation_domain: 'fr'
-
-
-
-
+    entities:
+        Questions:
+            class: App\Entity\Questions
+            disabled_actions: [new, edit]
 
 
 

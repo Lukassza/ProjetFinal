@@ -21,9 +21,13 @@ class Categories
     #[ORM\OneToMany(mappedBy: 'categorie', targetEntity: Videos::class)]
     private Collection $videos;
 
+    #[ORM\OneToMany(mappedBy: 'categorie', targetEntity: Questions::class)]
+    private Collection $questions;
+
     public function __construct()
     {
         $this->videos = new ArrayCollection();
+        $this->questions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -76,6 +80,36 @@ class Categories
 {
     return $this->getNom();
 }
+
+    /**
+     * @return Collection<int, Questions>
+     */
+    public function getQuestions(): Collection
+    {
+        return $this->questions;
+    }
+
+    public function addQuestion(Questions $question): self
+    {
+        if (!$this->questions->contains($question)) {
+            $this->questions->add($question);
+            $question->setCategorie($this);
+        }
+
+        return $this;
+    }
+
+    public function removeQuestion(Questions $question): self
+    {
+        if ($this->questions->removeElement($question)) {
+            // set the owning side to null (unless already changed)
+            if ($question->getCategorie() === $this) {
+                $question->setCategorie(null);
+            }
+        }
+
+        return $this;
+    }
 }
 
 

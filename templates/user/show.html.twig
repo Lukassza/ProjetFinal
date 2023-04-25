@@ -1,53 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Profil{% endblock %}
+{% block title %}Profil
+{% endblock %}
 
 
 {% block stylesheets %}
-{{parent()}}
-           <link href="{{ asset('css/show.css') }}" rel="stylesheet">
-        
+	{{parent()}}
+	<link href="{{ asset('css/show.css') }}" rel="stylesheet">
+
 {% endblock %}
 
 {% block body %}
-<br>
-<br>
-    <h1>Votre profil</h1>
+	<br>
+	<br>
+	<h1>Votre profil</h1>
 
-    <table class="table">
-        <tbody>
+	<table class="table">
+		<tbody>
 
-            <tr>
-                <th>pseudo:</th>
-                <td>{{ app.user.pseudo }}</td>
-            </tr>
-            <tr>
-                <th>Email:</th>
-                <td>{{ app.user.email }}</td>
-            </tr>
+			<tr>
+				<th>pseudo:</th>
+				<td>{{ app.user.pseudo }}</td>
+			</tr>
+			<tr>
+				<th>Email:</th>
+				<td>{{ app.user.email }}</td>
+			</tr>
 
-            <tr>
-                
-                <img class="pp" src={{ asset(vich_uploader_asset(app.user, 'imageFile')) }}>
-            </tr>
-            
-            
-        </tbody>
-    </table>
-    
-   
-    
+			<tr>
 
-    <a href="{{ path('app_user_edit', {'id': app.user.id}) }}">modifier</a>
+				<img class="pp" src={{ asset(vich_uploader_asset(app.user, 'imageFile')) }}>
+			</tr>
 
-    {{ include('user/_delete_form.html.twig') }}
+
+		</tbody>
+	</table>
+
+
+	<a href="{{ path('app_user_edit', {'id': app.user.id}) }}">modifier</a>
+
+	{{ include('user/_delete_form.html.twig') }}
 {% endblock %}
-
-
-
-
-
-
-
-
-

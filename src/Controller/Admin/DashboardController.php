@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\User;
 use App\Entity\Videos;
+use App\Entity\Questions;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
@@ -30,5 +31,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-list', User::class);
         yield MenuItem::linkToCrud('Videos', 'fas fa-list', Videos::class);
+        yield MenuItem::linkToCrud('Questions', 'fas fa-list', Questions::class);
     }
 }

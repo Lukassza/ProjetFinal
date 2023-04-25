@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -46,6 +48,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column(length: 20)]
     private ?string $pseudo = null;
+
+    #[ORM\OneToMany(mappedBy: 'pseudo', targetEntity: Questions::class)]
+    private Collection $questions;
+
+    public function __construct()
+    {
+        $this->questions = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -163,6 +173,42 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this->imageName;
     }
 
-    
+    /**
+     * @return Collection<int, Questions>
+     */
+    public function getQuestions(): Collection
+    {
+        return $this->questions;
+    }
+
+    public function addQuestion(Questions $question): self
+    {
+        if (!$this->questions->contains($question)) {
+            $this->questions->add($question);
+            $question->setPseudo($this);
+        }
+
+        return $this;
+    }
+
+    public function removeQuestion(Questions $question): self
+    {
+        if ($this->questions->removeElement($question)) {
+            // set the owning side to null (unless already changed)
+            if ($question->getPseudo() === $this) {
+                $question->setPseudo(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function __toString()
+{
+    return $this->pseudo;
+}
+
+
+
 }
 

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Questions{% endblock %}
+
+{% block body %}
+<br>
+    <h1>Poser une question</h1>
+
+    {{ include('questions/_form.html.twig') }}
+
+    <a href="{{ path('app_questions_index') }}">Retour</a>
+{% endblock %}
