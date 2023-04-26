@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 19 avr. 2023 à 10:28
+-- Généré le : mer. 26 avr. 2023 à 16:20
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.2.0
 
@@ -65,7 +65,8 @@ INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_
 ('DoctrineMigrations\\Version20230411070917', '2023-04-11 09:09:30', 142),
 ('DoctrineMigrations\\Version20230411075801', '2023-04-11 09:58:13', 20),
 ('DoctrineMigrations\\Version20230411083022', '2023-04-11 10:30:28', 110),
-('DoctrineMigrations\\Version20230417133529', '2023-04-17 15:35:42', 82);
+('DoctrineMigrations\\Version20230417133529', '2023-04-17 15:35:42', 82),
+('DoctrineMigrations\\Version20230425113253', '2023-04-25 13:33:03', 178);
 
 -- --------------------------------------------------------
 
@@ -79,6 +80,36 @@ CREATE TABLE `equipe` (
   `photo` varchar(255) DEFAULT NULL,
   `bio` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `equipe`
+--
+
+INSERT INTO `equipe` (`id`, `pseudo`, `photo`, `bio`) VALUES
+(1, 'Sancho', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Chimpanzee-Head.jpg/640px-Chimpanzee-Head.jpg', 'bio sanche'),
+(2, 'Pepito', 'https://cdn.discordapp.com/attachments/736687160018731101/1100378644163088424/DARK_NOOTNOOTSHARINGAN_VADOR.jpg', 'bio pepito'),
+(3, 'Rodri', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Chimpanzee-Head.jpg/640px-Chimpanzee-Head.jpg', 'bio rodri'),
+(4, 'Pizza', 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Chimpanzee-Head.jpg/640px-Chimpanzee-Head.jpg', 'Bio pizza');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `questions`
+--
+
+CREATE TABLE `questions` (
+  `id` int(11) NOT NULL,
+  `pseudo_id` int(11) NOT NULL,
+  `categorie_id` int(11) NOT NULL,
+  `texte` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `questions`
+--
+
+INSERT INTO `questions` (`id`, `pseudo_id`, `categorie_id`, `texte`) VALUES
+(1, 2, 1, 'Bonjour est ce que ?');
 
 -- --------------------------------------------------------
 
@@ -101,10 +132,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `email`, `roles`, `password`, `is_verified`, `pseudo`, `image_name`) VALUES
-(1, 'test@gmail.com', '[]', '$2y$13$q8uFKDbM/FYew8HfcRKbHeEejVVoCI08ChWgR4Q4tTAJvNH8tDyOK', 0, '', NULL),
-(2, '123@gmail.com', '[\"ROLE_ADMIN\"]', '$2y$13$PR.Va38FV9xRgR345kXQSu9LhrLHzCIs0xWoxULIqjw8zfcFZvGpy', 0, '123', 'zizou.jpg'),
+(2, '123@gmail.com', '[\"ROLE_ADMIN\"]', '$2y$13$PR.Va38FV9xRgR345kXQSu9LhrLHzCIs0xWoxULIqjw8zfcFZvGpy', 1, '123', 'zizou.jpg'),
 (4, 'aaa@gmail.com', '[]', '$2y$13$2b6ivvL9hhk4B/G.umIMtO7djUe9pfpzRrfWxvcC6vRcJkQf/7kLK', 0, 'aaaaaa', NULL),
-(5, 'zizou@gmail.com', '[]', '$2y$13$VsiToao7iGw7z/IiK7jkBetqIZqvDz/gYHuSkTQJABGXktNZBMYV2', 0, 'zizou', 'zizou.jpg'),
+(5, 'zizou@gmail.com', '[]', '$2y$13$VsiToao7iGw7z/IiK7jkBetqIZqvDz/gYHuSkTQJABGXktNZBMYV2', 1, 'zizou', 'zizou.jpg'),
 (6, 'aaaaaaaa@aaaaa.com', '[]', 'aaaaaaaaaaaaaaaaaaaa', 1, 'a o a', 'test.jpg');
 
 -- --------------------------------------------------------
@@ -156,6 +186,14 @@ ALTER TABLE `equipe`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `questions`
+--
+ALTER TABLE `questions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `IDX_8ADC54D520E394C2` (`pseudo_id`),
+  ADD KEY `IDX_8ADC54D5BCF5E72D` (`categorie_id`);
+
+--
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
@@ -183,7 +221,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT pour la table `equipe`
 --
 ALTER TABLE `equipe`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT pour la table `questions`
+--
+ALTER TABLE `questions`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT pour la table `user`
@@ -200,6 +244,13 @@ ALTER TABLE `videos`
 --
 -- Contraintes pour les tables déchargées
 --
+
+--
+-- Contraintes pour la table `questions`
+--
+ALTER TABLE `questions`
+  ADD CONSTRAINT `FK_8ADC54D520E394C2` FOREIGN KEY (`pseudo_id`) REFERENCES `user` (`id`),
+  ADD CONSTRAINT `FK_8ADC54D5BCF5E72D` FOREIGN KEY (`categorie_id`) REFERENCES `categories` (`id`);
 
 --
 -- Contraintes pour la table `videos`

@@ -23,7 +23,8 @@ class QuestionsCrudController extends AbstractCrudController
         return [
             TextField::new('texte'),
             AssociationField::new('categorie'),
-            IntegerField::new('pseudo')
+            // IntegerField::new('pseudo')
+            AssociationField::new('pseudo')
             
         ];
     }
