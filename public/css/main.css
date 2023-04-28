@@ -10,8 +10,8 @@ margin:0;}
 
  .entete{width:100vw;
   height:25vh;
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh532NpFv5psZRlznL6H69a5IkW6_rwhECuw&usqp=CAU");
-/* background-position: 0% 55%; */
+  background-image: url("https://fastly.picsum.photos/id/47/857/230.jpg?hmac=EodqY5T33Db8mRm8SIn2w4-hLqCz9bpYp5ZQZRQJsdI");
+background-size:cover;
 }
 
   .new{background-color:rgba(7, 7, 7, 0.384);

@@ -1,85 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>
-            {% block title %}Bienvenue
-            {% endblock %}
-        </title>
-        <link
-        rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-            <link href="{{ asset('css/base.css') }}" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css2?family=Futura+PT&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />        {% endblock %}
-            <link href="https://fonts.googleapis.com/css?family=Stencil+Std+Fantasy&display=swap" rel="stylesheet">
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Bienvenue
+			{% endblock %}
+		</title>
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
+		{% block stylesheets %}
+			<link href="{{ asset('css/base.css') }}" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Futura+PT&display=swap" rel="stylesheet">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		{% endblock %}
+		<link href="https://fonts.googleapis.com/css?family=Stencil+Std+Fantasy&display=swap" rel="stylesheet">
 
-        {% block javascripts %}
-            <script src="{{ asset('js/base.js') }}" defer></script>
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}
-        {% endblock %}
-        <nav>
-            <ul class="navbar">
-                <button type="btn" class="nuit"><i class="fa-solid fa-moon"></i></button>
-                <li>
-                    <a href="/">Accueil</a>
-                </li>
+		{% block javascripts %}
+			<script src="{{ asset('js/base.js') }}" defer></script>
+		{% endblock %}
+	</head>
+	<body>
+		{% block body %}{% endblock %}
+		<nav>
+			<ul class="navbar">
+				<button type="btn" class="nuit">
+					<i class="fa-solid fa-moon"></i>
+				</button>
+				<li>
+					<a href="/">Accueil</a>
+				</li>
 
-                <li>
-                    <a href="/equipe">Equipe</a>
-                </li>
-                <li class="dropdown">
-                    <a href="#jeux" class="dropdown-toggle">Jeux</a>
-                    <div class="dropdown-content">
-                        <a href="/jeux/gtfo">gtfo</a>
-                        <a href="/jeux/mcdungeon">mcdungeon</a>
-                        <a href="/jeux/lol">league of legends</a>
-                        {%if app.user %}
-                        <li class="profil">
-                            <a href="/user/2">profil</a>
-                        </li>
-                        {%endif%}
+				<li>
+					<a href="/equipe">Equipe</a>
+				</li>
+				<li class="dropdown">
+					<a href="#jeux" class="dropdown-toggle">Jeux</a>
+					<div class="dropdown-content">
+						<a href="/jeux/gtfo">gtfo</a>
+						<a href="/jeux/mcdungeon">mcdungeon</a>
+						<a href="/jeux/lol">league of legends</a>
+						{%if app.user %}
+							<li class="profil">
+								<a href="/user/2">profil</a>
+							</li>
+							{%endif%}
 
-                        {% if is_granted('ROLE_ADMIN') %}                        
-                        <li class="connexion"><a href="{{ path('admin') }}">Administration</a>
-                        </li>
-                        {%endif%}
-                        
-                        {%if app.user %}
-                        <li class="connexion"><a href="{{ path('app_logout') }}">Déconnexion</a>
-                        </li>
-                        {% else %}
-                        <li class="connexion">
-                            <a href="/login">Se connecter</a>
-                        </li>
-                        {%endif%}
-                        {%if app.user %}
-                        {% else %}
-                        <li class="inscription">
-                            <a href="/inscription">Inscription</a>
-                        </li>
-                        {%endif%}
-                    </div>
+							{% if is_granted('ROLE_ADMIN') %}
+								<li class="connexion">
+									<a href="{{ path('admin') }}">Administration</a>
+								</li>
+								{%endif%}
 
-                </li>
-            </ul>
-        </nav>
+								{%if app.user %}
+									<li class="connexion">
+										<a href="{{ path('app_logout') }}">Déconnexion</a>
+									</li>
+								{% else %}
+									<li class="connexion">
+										<a href="/login">Se connecter</a>
+									</li>
+									{%endif%}
+									{%if app.user %}
+										{% else %}
+											<li class="inscription">
+												<a href="/inscription">Inscription</a>
+											</li>
+											{%endif%}
+										</div>
 
-
-        <footer> 
-        <div class="reseaux">
-        <a href="https://www.youtube.com/@lospetitspanos"> <i class="fa-brands fa-youtube fa-shake" style="color: #eb0505;"></i>Youtube</a>
-        <a href="https://www.twitter.com/@lospetitspanos"> <i class="fa-brands fa-twitter fa-bounce" style="color: #09bebb;"></i>Twitter</a>
-        <a href="https://www.tiktok.com/@lospetispanos"><i class="fa-brands fa-tiktok fa-beat" style="color: #11D325;"></i>Tiktok</a>            
-        <a href="https://www.twitch.tv/lospetitspanos"><i class="fa-brands fa-twitch fa-flip" style="color: #2f1c73;"></i>Twitch</a>            
-
-            
-            </div>
-             <div>   Créé en 2023 par @Sanchesque tous droits réservés</div>
-        </footer>
-    </body>
+									</li>
+								</ul>
+							</nav>
 
 
+							<footer>
+								<div class="reseaux">
+									<a href="https://www.youtube.com/@lospetitspanos">
+										<i class="fa-brands fa-youtube fa-shake" style="color: #eb0505;"></i>Youtube</a>
+									<a href="https://www.twitter.com/@lospetitspanos">
+										<i class="fa-brands fa-twitter fa-bounce" style="color: #09bebb;"></i>Twitter</a>
+									<a href="https://www.tiktok.com/@lospetispanos">
+										<i class="fa-brands fa-tiktok fa-beat" style="color: #11D325;"></i>Tiktok</a>
+									<a href="https://www.twitch.tv/lospetitspanos">
+										<i class="fa-brands fa-twitch fa-flip" style="color: #2f1c73;"></i>Twitch</a>
+
+
+								</div>
+								<div>
+									Créé en 2023 par @Sanchesque tous droits réservés</div>
+							</footer>
+						</body>
+					</li>
