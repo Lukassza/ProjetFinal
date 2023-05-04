@@ -1,4 +1,5 @@
-body{background:linear-gradient(rgb(3, 169, 207),rgb(1, 82, 93));
+body{height:100vh;
+  background:linear-gradient(rgb(3, 169, 207),rgb(1, 82, 93));
 
 margin:0;}
 
@@ -32,5 +33,14 @@ background-size:cover;
   text-align:center;
 flex:1;}
 
+@media only screen and (min-width: 319px) and (max-width: 1000px) {
 
+.biovideo{flex-direction: column;}
+
+iframe{height:15vh;width:60vw;}
+body{font-size:larger;}
+footer{font-size:40px;}
+.bio{font-size:30px;}
+
+}
   

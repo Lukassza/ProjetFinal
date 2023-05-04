@@ -175,7 +175,13 @@ text-shadow: 0 0 5px #01a501, 0 0 15px #01a501, 0 0 20px #01a501, 0 0 40px #01a5
 
 
 
-/* Responsive */
 @media only screen and (min-width:319px) and (max-width:1000px){ 
   
+
+.agetexte{font-size:40px;}
+
+.intro{font-size:30px;}
+
+.bio{font-size:30px;}
+
 }
