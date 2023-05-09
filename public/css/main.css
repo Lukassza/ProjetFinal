@@ -38,10 +38,12 @@ flex:1;}
 .biovideo{flex-direction: column;}
 
 iframe{height:15vh;width:60vw;}
-body{font-size:larger;}
-footer{font-size:40px;}
-.bio{font-size:30px;}
 
+body{font-size:larger;}
+
+footer{font-size:40px;}
+
+.bio{font-size:30px;}
 
 }
   

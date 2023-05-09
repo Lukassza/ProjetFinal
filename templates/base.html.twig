@@ -40,12 +40,15 @@
 						<a href="/jeux/lol">league of legends</a>
 						{%if app.user %}
 							<li class="profil">
-								<a href="/user/2">profil</a>
+								<a href="/user/2">Profil</a>
+							</li>
+							<li class="questionnav">
+								<a href="/questions">Questions</a>
 							</li>
 							{%endif%}
 
 							{% if is_granted('ROLE_ADMIN') %}
-								<li class="connexion">
+								<li class="admin">
 									<a href="{{ path('admin') }}">Administration</a>
 								</li>
 								{%endif%}

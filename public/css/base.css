@@ -18,8 +18,9 @@ nav ul {
   padding: 0;
 }
 
+
 .connexion {
-  margin-left: 65%;
+  margin-left: auto;
 }
 
 nav li {
@@ -131,7 +132,6 @@ footer i {
   .connexion {
     margin-left: 10vw;
   }
-
 
   .dropdown .dropdown-content {
     position: absolute;
