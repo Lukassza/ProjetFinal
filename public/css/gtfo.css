@@ -9,12 +9,12 @@ font-family: "Copperplate Gothic Light"; font-size: 20px; font-style: normal; fo
 
 
 .titre{font-family: "Copperplate Gothic Light";
-  font-weight: bold;
-  position:absolute;
-top:8vh;
-left:38vw;
-font-size:100px;
-animation: blink 12s infinite;}
+      font-weight: bold;
+      position:absolute;
+      top:8vh;
+      left:38vw;
+      font-size:100px;
+      animation: blink 12s infinite;}
 
 .liens{display:flex;
   position:absolute;
@@ -177,7 +177,6 @@ text-shadow: 0 0 5px #01a501, 0 0 15px #01a501, 0 0 20px #01a501, 0 0 40px #01a5
 
 @media only screen and (min-width:319px) and (max-width:1000px){ 
   
-
 .agetexte{font-size:40px;}
 
 .intro{font-size:30px;}

@@ -1,36 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Los Petits Panos{% endblock %}
+{% block title %}Los Petits Panos
+{% endblock %}
 
 {% block stylesheets %}
-{{parent()}}
-           <link href="{{ asset('css/jeux.css') }}" rel="stylesheet">
-           <link href="{{ asset('css/gtfo.css') }}" rel="stylesheet">
-		  
+	{{parent()}}
+	<link href="{{ asset('css/jeux.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/gtfo.css') }}" rel="stylesheet">
 {% endblock %}
 
 {% block javascripts %}
-            <script src="{{ asset('js/gtfo.js') }}" defer></script>
-        {% endblock %}
-
+	<script src="{{ asset('js/gtfo.js') }}" defer></script>
+{% endblock %}
 
 {% block body %}
 
-<div class="titre">GTFO</div>
-<div class="container">
-    <video autoplay loop muted>
-      <source src="https://storage.googleapis.com/gtfo-prod-v1/Trailer_for_website_Pro_Res_2_H_264_24fef05909/Trailer_for_website_Pro_Res_2_H_264_24fef05909.mp4" type="video/mp4">
-    </video>
-</div>
+	<div class="titre">GTFO</div>
+	<div class="container">
+		<video autoplay loop muted>
+			<source src="https://storage.googleapis.com/gtfo-prod-v1/Trailer_for_website_Pro_Res_2_H_264_24fef05909/Trailer_for_website_Pro_Res_2_H_264_24fef05909.mp4" type="video/mp4">
+		</video>
+	</div>
 
+	<div class="intro">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu varius leo. Cras lobortis, ligula eu mattis blandit, mi est tincidunt quam, in convallis nisi mi at quam. Nunc pharetra lorem nisi, ut pellentesque libero molestie vel. Sed viverra nibh et diam accumsan, in pulvinar nisi finibus. Nunc imperdiet dolor erat, a euismod ligula cursus in. Nulla blandit, lorem ut egestas venenatis, elit arcu ornare eros, vitae cursus neque purus eget mauris. Integer et feugiat nisi. Ut id tincidunt nunc, quis posuere turpis.
+	</div>
 
-
-<div class="intro"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu varius leo. Cras lobortis, ligula eu mattis blandit, mi est tincidunt quam, in convallis nisi mi at quam. Nunc pharetra lorem nisi, ut pellentesque libero molestie vel. Sed viverra nibh et diam accumsan, in pulvinar nisi finibus. Nunc imperdiet dolor erat, a euismod ligula cursus in. Nulla blandit, lorem ut egestas venenatis, elit arcu ornare eros, vitae cursus neque purus eget mauris. Integer et feugiat nisi. Ut id tincidunt nunc, quis posuere turpis.
-</div>
-
-<div class="liens">
-
-{% for video in videos %}
+	<div class="liens">
+		{% for video in videos %}
 
 			<div class="biovideo">
 				<iframe width="350" height="200" src="{{ video.lien|replace({'watch?v=': 'embed/'}) }}"></iframe>
@@ -39,21 +36,16 @@
 				</div>
 			</div>
 		{% endfor %}
-
-</div>
-
-
-<div class="age">
-  <div class="agetexte">
-    
-    <p class="centreage">Cette page est réservé à un public majeur, en appuyant sur ce bouton vous déclarez avoir plus de 18 ans.</p>
-	<button class="ageferme" type="btn">Je suis majeur</button>
-  </div>
-</div>
+	</div>
 
 
+	<div class="age">
+		<div class="agetexte">
 
-
+			<p class="centreage">Cette page est réservé à un public majeur, en appuyant sur ce bouton vous déclarez avoir plus de 18 ans.</p>
+			<button class="ageferme" type="btn">Je suis majeur</button>
+		</div>
+	</div>
 
 
 {% endblock %}
