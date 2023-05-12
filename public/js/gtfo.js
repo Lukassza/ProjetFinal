@@ -1,7 +1,7 @@
 window.onload = function() {
-    var age = document.querySelector('.age');
-    var ageferme = document.querySelector('.ageferme');
-    var agetexte = document.querySelector('.agetexte');
+    let age = document.querySelector('.age');
+    let ageferme = document.querySelector('.ageferme');
+    let agetexte = document.querySelector('.agetexte');
 
 
     ageferme.onclick = function() {
