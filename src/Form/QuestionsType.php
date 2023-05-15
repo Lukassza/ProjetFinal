@@ -6,7 +6,8 @@ use App\Entity\User;
 use App\Entity\Questions;
 use App\Entity\Categories;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Security\Core\Security;
+use Symfony\Bundle\SecurityBundle\Security;
+// use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -31,22 +32,8 @@ class QuestionsType extends AbstractType
         ->add('categorie', EntityType::class, [
             'class' => Categories::class,
             'choice_label' => 'nom',
-        ])
-            // ->add('categorie', ChoiceType::class, [
-            //     'choices' => [
-            //         'GTFO' => 1,
-            //         'LOL' => 2,
-            //         'McDungeon' => 3,
-            //         'Autre' => 4,
-            //     ],
-            // ])
-            ->add('pseudo', EntityType::class, [
-                'class' => User::class,
-                'choice_label' => 'pseudo'
-            ]);
-            // ->add('pseudo', HiddenType::class, [
-            //     'data' => $this->security->getUser()->getId(),
-            // ]);
+        ]);
+        
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -1,12 +1,18 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+	{{parent()}}
+	<link href="{{ asset('css/questions.css') }}" rel="stylesheet">
+{% endblock %}
+
 {% block title %}Questions{% endblock %}
 
 {% block body %}
 <br>
+<div class="centre">
     <h1>Poser une question</h1>
 
     {{ include('questions/_form.html.twig') }}
-
-    <a href="{{ path('app_questions_index') }}">Retour</a>
+</div>
+    
 {% endblock %}
