@@ -5,10 +5,9 @@ margin:0;}
 
 
 
-
   .bodynuit{background:linear-gradient(red,black);}
 
-
+ 
  .entete{width:100vw;
   height:25vh;
   background-image: url("../images/Banniere LPP.jpg");
@@ -27,10 +26,11 @@ background-size:cover;
 
 
   .biovideo{display:flex;
+    margin-left:1%;
   align-items:center;
   margin-bottom:5%;
- box-shadow: 0px 10px 10px rgba(19, 1, 1, 0.365)
-  
+ box-shadow: 0px 10px 10px rgba(19, 1, 1, 0.365);
+  font-size:20px;
  }
 
   .bio{color:white;
@@ -48,7 +48,7 @@ body{font-size:larger;}
 
 footer{font-size:40px;}
 
-.bio{font-size:30px;}
+.bio{font-size:40px;}
 
 }
   

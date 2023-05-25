@@ -12,9 +12,10 @@
 
 {% block body %}
 <br>
+<br>
     <h1>L'équipe </h1>
 
-
+ 
  <div class="card-container">
         {% for equipe in equipes %}
             <div class="card">
@@ -29,8 +30,8 @@
                 </div>
                 {% if is_granted('ROLE_ADMIN') %}                          
                 <div class="card-actions">
-                    <a href="{{ path('app_equipe_show', {'id': equipe.id}) }}">Voir</a>
-                    <a href="{{ path('app_equipe_edit', {'id': equipe.id}) }}">Modifier</a>
+                    <a class="cool" href="{{ path('app_equipe_show', {'id': equipe.id}) }}">Voir</a>
+                    <a class="cool" href="{{ path('app_equipe_edit', {'id': equipe.id}) }}">Modifier</a>
                 </div>
                 {%endif%}
             </div>
@@ -39,7 +40,7 @@
         {% endfor %}
     </div>
     {% if is_granted('ROLE_ADMIN') %} 
-    <a href="{{ path('app_equipe_new') }}">Nouveau membre</a>
+    <a class="neutre" href="{{ path('app_equipe_new') }}">Nouveau membre</a>
     {%endif%}
 
 {% endblock %}

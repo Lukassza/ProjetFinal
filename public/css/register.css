@@ -31,12 +31,27 @@ body{width:100vw;
     .hophop{font-size:25px;
     width:8vw;}
         
-    input{font-size:20px;}
+    input{margin-left:2%; font-size:20px;}
 
     .vich-image{font-size:25px!important;}
     #registration_form_imageFile_file{width:25vw;
     font-size:20px;}
 
+
+
     @media only screen and (min-width:319px) and (max-width:1000px){ 
+
+        .formulaire{width:90%;
+            border-radius: 1;
+            font-size:50px;}
+
+        input{width:30%;
+            font-size:35px;}
+
+        .hophop{font-size:35px;
+                width:18vw;}
+
+        #registration_form_imageFile_file{width:80vw;
+            font-size:30px;}
 
     }

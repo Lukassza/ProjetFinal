@@ -127,6 +127,9 @@ footer i {
 
 /* Responsive */
 @media only screen and (min-width: 319px) and (max-width: 1000px) {
+
+  /* body{width:100vw;height:100vh;} */
+
   nav {
     font-size: 25px;
   }

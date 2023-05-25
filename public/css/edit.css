@@ -1,0 +1,44 @@
+
+body {height:100vh;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    background-image: url("https://cdn.pixabay.com/photo/2018/10/16/07/07/stars-3750824_640.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color:white;
+  }
+
+
+
+
+
+  @media only screen and (min-width:319px) and (max-width:1000px){
+    body {
+      font-size: 40px;
+    }
+    .container {
+      max-width: 90vw; 
+      padding: 0 5px;  
+    }
+    h1 {
+      font-size: 40px;  
+      width:70vw; 
+    }
+    .neutre, .cool {
+      font-size: 40px; 
+    }
+    .pp {
+      max-width:50vw;
+      
+      width: 60vw; 
+      height: 60vh; 
+    }
+    
+    input{font-size:40px;}
+
+    .save{font-size:40px;}
+  
+    
+  }

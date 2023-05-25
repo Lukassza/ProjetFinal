@@ -2,6 +2,12 @@
 
 {% block title %}Modifier le profil{% endblock %}
 
+{% block stylesheets %}
+	{{parent()}}
+	<link href="{{ asset('css/edit.css') }}" rel="stylesheet">
+
+{% endblock %}
+
 {% block body %}
     <br>
     <br>

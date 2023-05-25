@@ -8,7 +8,17 @@
 color:rgb(0, 248, 12);
 font-family: "Copperplate Gothic Light"; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;}
 
-.container{text-align:center;}
+.container{text-align:center;
+width:100%;}
+
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+
 
 .titre{width:100vw;
   font-family: "Copperplate Gothic Light";
@@ -43,7 +53,7 @@ font-size:20px;}
 
 
 
-
+/* !anim titre */
 @keyframes blink {
   20%,22%,55%,75%,96%,98%{
     color: #090b0044;
@@ -57,14 +67,7 @@ text-shadow: 0 0 5px #01a501, 0 0 15px #01a501, 0 0 20px #01a501, 0 0 40px #01a5
 }
 
 
-
-
-
-
-
-
-
- /* anim div intro */
+ /* ! anim div intro */
 *,
 *::before,
 *::after {
@@ -138,7 +141,7 @@ text-shadow: 0 0 5px #01a501, 0 0 15px #01a501, 0 0 20px #01a501, 0 0 40px #01a5
 }
 
 
-/* PopUp */
+/* !PopUp */
 
 .age {
   position: fixed;
@@ -179,7 +182,6 @@ font-size:30px;}
 
 
 
-
 /*  particules inspiré du travail de Marc Daniel Dayag */
 #snow {
   position: fixed;
@@ -215,10 +217,25 @@ font-size:30px;}
 
 @media only screen and (min-width:319px) and (max-width:1000px){ 
   
-.agetexte{font-size:40px;}
+  html{width:100%;}
 
-.intro{font-size:30px;}
+.agetexte{font-size:30px;}
 
-.bio{font-size:30px;}
+.intro{width:80%;
+  left:10%;
+  font-size:60px;}
+
+.bio{font-size:40px;
+  width:100%;}
+
+.age{width:100vw;height:100vh;
+}
+
+.titre{display:none;}
+
+.liens{top:40%;
+  flex-direction: column;
+  width:90vw;
+align-items: center;}
 
 }

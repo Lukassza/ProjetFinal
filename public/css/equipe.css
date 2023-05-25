@@ -1,5 +1,19 @@
-body{margin:0;
-padding:0;}
+body{height:100vh;
+    margin:0;
+padding:0;
+background-image: url("https://cdn.pixabay.com/photo/2022/08/28/03/59/low-poly-7415677_640.png");
+background-size: cover;
+background-repeat: no-repeat;}
+
+h1{width:100vw;
+text-align: center;
+font-size:40px;
+color:white;
+border-bottom: solid rgb(255, 255, 255);}
+
+
+
+
 /* Carte équipe */
 .card-container {
     display: flex;
@@ -48,22 +62,34 @@ padding:0;}
     align-items: center;
 }
 
+.neutre{text-decoration: none;
+color:white;
+text-decoration: underline;
+font-size:25px;}
+
+.cool{text-decoration:none;
+color:rgb(0, 0, 0);
+text-decoration: underline;
+font-size:20px;}
+
 .card-content h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-}
+    color:white;
+} 
 
 .card-content .bio {
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
-    font-size:20px !important;
+    font-size:30px ;
 }
 
 .card-content .bio p {
-    font-size: 1rem;
-    color: #555;
+    font-size: 25px;
+    color: #aaa9a9;
     margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 .card-content .bio p:last-child {
@@ -85,16 +111,24 @@ padding:0;}
 
 
 /* Responsive */
-@media screen and (max-width: 1024px) {
-    .card {
-        width: 45%;
-    }
-}
 
 
-
-@media screen and (max-width: 768px) {
+@media only screen and (min-width: 319px) and (max-width: 1000px) {
     .card {
         width: 100%;
+        flex-direction:column;
     }
+
+    body{height:150vh;
+    }
+
+    .bio{font-size: 40px !important;}
+    h2{font-size: 40px !important;}
+
+    .card-image {width:50%; 
+        height:80%;margin:auto;
+    }
+    .cool{font-size:30px;}
+    
+
 }
