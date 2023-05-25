@@ -2,6 +2,7 @@ let nuit = document.querySelector(".nuit");
 let nav = document.querySelector("nav");
 let a = document.querySelectorAll("a");
 let icon = document.querySelector(".fa-solid");
+let entete = document.querySelector(".entete");
 let body=document.body;
 
 
@@ -16,6 +17,8 @@ nuit.addEventListener("click", function (e) {
     icon.classList.remove("farnuit");
     icon.classList.remove("fa-sun");
     icon.classList.add("fa-moon");
+    entete.classList.remove("entetenuit");
+    entete.classList.add("entete");
   } else {
     a.classList.add("anuit");
     nav.classList.add("navnuit");
@@ -23,6 +26,8 @@ nuit.addEventListener("click", function (e) {
     icon.classList.add("farnuit");
     icon.classList.remove("fa-moon");
     icon.classList.add("fa-sun");
+    entete.classList.add("entetenuit");
+    entete.classList.remove("entete");
   }
 });
 });

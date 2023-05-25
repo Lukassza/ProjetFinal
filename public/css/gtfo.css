@@ -1,18 +1,21 @@
 .intro{position:absolute;
     top:20%;
-    left:15%;
+    left:25%;
     z-index:1;
-    width:70%;
+    font-size:30px !important;
+    width:50%;
     background-color: rgba(0, 0, 0, 0.664);
 color:rgb(0, 248, 12);
 font-family: "Copperplate Gothic Light"; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;}
 
+.container{text-align:center;}
 
-.titre{font-family: "Copperplate Gothic Light";
+.titre{width:100vw;
+  font-family: "Copperplate Gothic Light";
       font-weight: bold;
       position:absolute;
       top:8vh;
-      left:38vw;
+      left:42%;
       font-size:100px;
       animation: blink 12s infinite;}
 
@@ -28,7 +31,8 @@ font-family: "Copperplate Gothic Light"; font-size: 20px; font-style: normal; fo
   width:50vw;
   flex-direction:column;
   align-items:center;
-  margin-bottom:5%;}
+  margin-bottom:5%;
+font-size:20px;}
 
 .bio{ text-shadow: 1px 1px 10px rgb(41, 241, 41);
   width:30vw;
@@ -170,7 +174,8 @@ text-shadow: 0 0 5px #01a501, 0 0 15px #01a501, 0 0 20px #01a501, 0 0 40px #01a5
  
 }
 
-.centreage{margin-top:40vh;}
+.centreage{margin-top:40vh;
+font-size:30px;}
 
 
 

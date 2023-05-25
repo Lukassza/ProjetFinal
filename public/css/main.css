@@ -11,7 +11,13 @@ margin:0;}
 
  .entete{width:100vw;
   height:25vh;
-  background-image: url("https://fastly.picsum.photos/id/47/857/230.jpg?hmac=EodqY5T33Db8mRm8SIn2w4-hLqCz9bpYp5ZQZRQJsdI");
+  background-image: url("../images/Banniere LPP.jpg");
+background-size:cover;
+}
+
+.entetenuit{width:100vw;
+  height:25vh;
+  background-image: url("../images/Banniere LPP-dark.jpg");
 background-size:cover;
 }
 
